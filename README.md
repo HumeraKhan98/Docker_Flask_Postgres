@@ -1,6 +1,6 @@
 # Docker_Flask_Postgres
 
-#################################################################
+####################################################################
 To launch the application
 -------------------------
 1. In VSC, setup the virtual environment:
@@ -17,14 +17,14 @@ Go to view -> command palette -> Python: select interpretor -> choose .env path
  
 4. browse http://localhost:5000 to view the application
 
-###################################################################
+######################################################################
 To login to the postgres container
 ----------------------------------
 
 => docker exec -it container-name bash (example: docker exec -it postgrescontainer bash)
 => psql -d db_name -U user_name (example, psql -d flask_db -U sammy)
 
-###################################################################
+######################################################################
 Reference Postgres commands
 ---------------------------
 => GRANT ALL PRIVILEGES ON DATABASE flask_db TO sammy;
@@ -38,7 +38,7 @@ Reference Postgres commands
 => \q (to quit)
 
 
-###################################################################
+######################################################################
 Reference links:
 ----------------
 1. https://www.digitalocean.com/community/tutorials/how-to-use-a-postgresql-database-in-a-flask-application
