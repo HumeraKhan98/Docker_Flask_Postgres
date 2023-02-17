@@ -11,10 +11,7 @@ def get_db_connection():
                             user="sammy",
                             password="")
     return conn
-conn = psycopg2.connect(host='postgrescontainer',
-                        database='flask_db',
-                        user="sammy",
-                        password='')
+conn = get_db_connection()
 cur = conn.cursor()
 # Execute a command: this creates a new table
 cur.execute('DROP TABLE IF EXISTS books;')
