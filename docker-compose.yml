@@ -1,0 +1,24 @@
+version: '2.1'
+services:
+  postgres:
+    restart: always
+    image: postgres
+    container_name: postgrescontainer
+    environment:
+      - POSTGRES_USER=sammy
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=flask_db
+    volumes:
+      - ./postgres-data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  app:
+    restart: always
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    depends_on:
+    - postgres
+    entrypoint: ["python", "application.py"]
