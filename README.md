@@ -8,9 +8,9 @@ To launch the application
 Go to view -> command palette -> Python: select interpretor -> choose .env path
 
 2. run the following commands to setup flask:
- => python -m pip install --upgrade pip
- => python -m pip install flask
- => pip install Flask psycopg2-binary
+ a. python -m pip install --upgrade pip
+ b. python -m pip install flask
+ c. pip install Flask psycopg2-binary
  
 3. run the docker compose file:
  => docker-compose up
@@ -21,21 +21,21 @@ Go to view -> command palette -> Python: select interpretor -> choose .env path
 To login to the postgres container
 ----------------------------------
 
-=> docker exec -it container-name bash (example: docker exec -it postgrescontainer bash)
-=> psql -d db_name -U user_name (example, psql -d flask_db -U sammy)
+1. docker exec -it container-name bash (example: docker exec -it postgrescontainer bash)
+2. psql -d db_name -U user_name (example, psql -d flask_db -U sammy)
 
 ######################################################################
 Reference Postgres commands
 ---------------------------
-=> GRANT ALL PRIVILEGES ON DATABASE flask_db TO sammy;
-=> GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO sammy;
-=> select current_user, session_user;
-=> set role sammy; (switch role to user sammy)
-=> \l (list databases)
-=> \du (list of users)
-=> \dt (list of tables)
-=> \c database_name (change database)
-=> \q (to quit)
+1. GRANT ALL PRIVILEGES ON DATABASE flask_db TO sammy;
+2. GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO sammy;
+3. select current_user, session_user;
+4. set role sammy; (switch role to user sammy)
+5. \l (list databases)
+6. \du (list of users)
+7. \dt (list of tables)
+8. \c database_name (change database)
+9. \q (to quit)
 
 
 ######################################################################
